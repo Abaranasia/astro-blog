@@ -1,9 +1,8 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 
-/* interface Props {
-    title?: string;
-} */
+import '../styles/blog.css';
+
 const {title, ...rest} = Astro.props;
 
 const frontmatter = rest.frontmatter;
