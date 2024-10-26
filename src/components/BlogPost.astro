@@ -1,0 +1,23 @@
+---
+const { title, imageSrc, date, ...rest } = Astro.props;
+---
+<div class="lg:flex">
+    <img
+      class="object-cover w-full h-56 rounded-lg lg:w-64"
+      src={imageSrc}
+      alt=""
+    />
+
+    <div class="flex flex-col justify-between py-6 lg:mx-6">
+      <a
+        href="#"
+        class="text-xl font-semibold hover:underline text-white"
+      >
+        {title}
+      </a>
+
+      <span class="text-sm text-gray-300"
+        >{date}</span
+      >
+    </div>
+  </div>
