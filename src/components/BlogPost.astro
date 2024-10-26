@@ -1,4 +1,6 @@
 ---
+import {Formatter} from '@utils/Formatter';
+
 const { frontmatter, url } = Astro.props;
 ---
 <div class="lg:flex">
@@ -17,7 +19,7 @@ const { frontmatter, url } = Astro.props;
       </a>
 
       <span class="text-sm text-gray-300">
-        {frontmatter.date}
+        {Formatter.formatDate(frontmatter.date)}
       </span>
     </div>
   </div>
