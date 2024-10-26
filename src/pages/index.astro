@@ -1,7 +1,7 @@
 ---
-import BlogPost from "../components/BlogPost.astro";
+import BlogPost from "@components/BlogPost.astro";
 import { siteConfig } from "../config/site-config";
-import MainLayout from "../layout/MainLayout.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 
 const posts = await Astro.glob("./posts/*.{md,mdx}");
 ---
