@@ -22,15 +22,15 @@ const { Content, headings} = await post.render();
 <BlogCollectionLayout title={frontmatter.title}>
    <h1 class="text-md text-white">{frontmatter.title}</h1>
    <hr /> 
-   <h4 class="text-md text-gray-400 italic text-right my-3">By {frontmatter.author}</h4>
+   <h4 class="text-md text-gray-400 italic text-right">By {frontmatter.author}</h4>
     <Image
-    class="object-cover w-full h-56 rounded-lg lg:w-64"
-    src={frontmatter.image}
-    alt={frontmatter.title}
-    width={900}
-    height={600}
-    quality="high"
-    loading="lazy"
+        class="object-cover w-full h-[250px] rounded-md my-5"
+        src={frontmatter.image}
+        alt={frontmatter.title}
+        width={900}
+        height={300}
+        quality="high"
+        loading="lazy"
     /> 
     
     <!-- Table of contents -->

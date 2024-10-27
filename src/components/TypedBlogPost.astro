@@ -22,6 +22,7 @@ const frontmatter= post.data;
         height={600}
         quality="low"
         loading="lazy"
+        transition:name={`${post.slug}-image`}
       />
       <a
         href={`/posts/${post.slug}`}
