@@ -19,6 +19,22 @@ const frontmatter = post.data;
 const { Content, headings} = await post.render();
 ---
 <BlogCollectionLayout title={frontmatter.title}>
-    <h3>By {frontmatter.author}</h3>
+    <h4 class="text-md text-gray-400 italic">By {frontmatter.author}</h4>
+    <!-- Table of contents -->
+    <h3>Tabla de contenidos</h3>
+    <ol>
+        {
+            headings.map((heading, index) => (
+                <li>
+                    <a href={`#${heading.slug}`}>{index+1} - {heading.text}</a>
+                </li>
+            ))
+        }
+    </ol>
+    <!-- Post Contents -->
     <Content />
+
+    <div class="my-20">
+        <a href="#back-btn">Ir arriba</a>
+    </div>
 </BlogCollectionLayout>
