@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import {Formatter} from '@utils/Formatter';
 import type { CollectionEntry } from 'astro:content';
 
@@ -13,11 +14,15 @@ const frontmatter= post.data;
 <div class="lg:flex">
     
     <div class="flex flex-col justify-between py-6 lg:mx-6">
-        <img
-          class="object-cover w-full h-56 rounded-lg lg:w-64"
-          src={frontmatter.image}
-          alt=""
-        />
+      <Image
+        class="object-cover w-full h-56 rounded-lg lg:w-64"
+        src={frontmatter.image}
+        alt={frontmatter.title}
+        width={600}
+        height={600}
+        quality="low"
+        loading="lazy"
+      />
       <a
         href={`/posts/${post.slug}`}
         class="text-xl font-semibold hover:underline text-white"
