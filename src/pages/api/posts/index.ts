@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { getCollection, getEntry } from "astro:content";
+/** Call example: http://localhost:4321/api/posts?slug=post-01 */
 
 export const prerender = false; // This defines that this page should be server side rendered (so dynamic)
 
